@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import click
+from unravel_num_str import unravel
+
+@click.command()
+@click.option('--sd', prompt = "start digit, bae:", default = 1, help = 'start digit for those who are interested')
+@click.option('--i', prompt = "how many iterations, bae?:", default = 6, help = 'number of iterations')
+
+def unravels(sd,i):
+    click.echo(click.style(unravel.digitIterate(sd,i), fg='green'))
+
+if __name__ == '__main__':
+    unravels()
